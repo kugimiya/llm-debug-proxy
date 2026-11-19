@@ -1,0 +1,17 @@
+services:
+  catcher:
+    build: .
+    ports:
+      - "${PUBLISH_PORT:-1234}:1234"
+    environment:
+      LISTEN_HOST: "0.0.0.0"
+      LISTEN_PORT: "1234"
+      TARGET_HOST: "${TARGET_HOST:-host.docker.internal}"
+      TARGET_PORT: "${TARGET_PORT:-1235}"
+      LOG_DIR: /app/logs
+      SKIP_LOG_PATHS: "${SKIP_LOG_PATHS:-/api/v1/models}"
+    volumes:
+      - ./logs:/app/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped

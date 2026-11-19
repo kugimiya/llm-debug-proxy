@@ -1,0 +1,15 @@
+{
+  "name": "lmstudio-api-catcher",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start:opencode": "LISTEN_PORT=1234 TARGET_PORT=1235 node index.js",
+    "dev": "node --watch index.js",
+    "dev:opencode": "LISTEN_PORT=1234 TARGET_PORT=1235 node --watch index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
