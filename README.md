@@ -1,4 +1,4 @@
-# lmstudio-api-catcher
+# llm-debug-proxy
 
 Прозрачный HTTP-прокси между клиентом и [LM Studio](https://lmstudio.ai/) (OpenAI-compatible API). Ничего не меняет в протоколе — только пересылает запросы и **сохраняет снимки** в `logs/`, чтобы было видно, что ушло от OpenCode (или другого клиента) и что вернул LM Studio.
 
